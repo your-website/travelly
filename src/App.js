@@ -1,6 +1,6 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import Intro from "./components/Intro";
+import Location from "./components/Location";
 import GlobalStyles from "./components/GlobalStyles";
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Nav />
       <main>
         <Hero />
-        <Intro />
+        <Location />
       </main>
     </div>
   );

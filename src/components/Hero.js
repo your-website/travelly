@@ -37,4 +37,5 @@ const HeroStyle = styled.section`
     padding: 5rem;
   }
 `;
+
 export default Hero;
