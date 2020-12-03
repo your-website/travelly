@@ -6,9 +6,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyles />
-      <header>
-        <Nav />
-      </header>
+      <Nav />
       <main>
         <Hero />
         <Intro />
