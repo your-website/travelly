@@ -4,20 +4,20 @@ import styled from "styled-components";
 import { Button } from "../style";
 // Image
 import landingPage from "../img/landing-page.jpg";
-const Hero = () => {
+const Travel = () => {
   return (
-    <HeroStyle id="hero" background={landingPage}>
+    <Traveltyle id="hero" background={landingPage}>
       <h2>Travel Beyond Limits.</h2>
       <h3>
         Start your travel at an affordable price with Travelly <br /> Contact us
         now bellow.
       </h3>
       <Button>Book Now</Button>
-    </HeroStyle>
+    </Traveltyle>
   );
 };
 
-const HeroStyle = styled.section`
+const Traveltyle = styled.section`
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), transparent),
     url(${(props) => props.background});
   background-size: cover;
@@ -39,4 +39,4 @@ const HeroStyle = styled.section`
   }
 `;
 
-export default Hero;
+export default Travel;

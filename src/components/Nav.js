@@ -1,23 +1,26 @@
 import React from "react";
 import styled from "styled-components";
+// Redux
+import { useDispatch } from "react-redux";
+import {
+  setContactPage,
+  setBenefitsPage,
+  setTravelPage,
+  setLocationPage,
+} from "../actions/pageActions";
 
 const Nav = () => {
+  const dispatch = useDispatch();
   return (
     <Header>
       <NavStyle>
-        <h1 id="logo">
-          <a href="#hero">Travelly</a>
+        <h1 id="logo" onClick={() => dispatch(setTravelPage(true))}>
+          Travelly
         </h1>
         <ul>
-          <li>
-            <a href="#location">Locations</a>
-          </li>
-          <li>
-            <a href="#benefits">Benefits</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+          <li onClick={() => dispatch(setLocationPage(true))}>Locations</li>
+          <li onClick={() => dispatch(setBenefitsPage(true))}>Benefits</li>
+          <li onClick={() => dispatch(setContactPage(true))}>Contact</li>
         </ul>
       </NavStyle>
     </Header>
@@ -48,6 +51,7 @@ const NavStyle = styled.nav`
     font-family: "Pattaya", sans-serif;
     font-weight: 400;
     letter-spacing: 0.1rem;
+    cursor: pointer;
   }
 
   ul {
@@ -60,6 +64,7 @@ const NavStyle = styled.nav`
   li {
     flex: 1 0 10rem;
     text-align: center;
+    cursor: pointer;
   }
 
   @media (max-width: 671px) {

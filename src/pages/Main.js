@@ -1,31 +1,80 @@
-import React, { useEffect } from "react";
+import React from "react";
 // Style
 import styled from "styled-components";
 // Components
-import Hero from "../components/Hero";
+import Travel from "../components/Travel";
 import Location from "../components/Location";
 import Benefits from "../components/Benefits";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 // Animate
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import {
+  animLocation,
+  staggerPage,
+  animBenefits,
+  animContact,
+} from "../animations";
+// Redux
+import { useSelector } from "react-redux";
+
 const MainPage = () => {
+  const { benefits, contact, location } = useSelector((state) => state.page);
+
+  const controlsLocation = useAnimation();
+  if (location) {
+    controlsLocation.start("show");
+  } else {
+    controlsLocation.start("hidden");
+  }
+
+  const controlsBenefits = useAnimation();
+  if (benefits) {
+    controlsBenefits.start("show");
+  } else {
+    controlsBenefits.start("hidden");
+  }
+
+  const controlsContact = useAnimation();
+  if (contact) {
+    controlsContact.start("show");
+  } else {
+    controlsContact.start("hidden");
+  }
+
   return (
     <Page>
-      <Main>
-        <HeroStyle>
-          <Hero />
-        </HeroStyle>
-        <LocationStyle>
-          <Location />
-        </LocationStyle>
-        <BenefitsStyle>
-          <Benefits />
-        </BenefitsStyle>
-        <ContactStyle>
-          <Contact />
-        </ContactStyle>
-      </Main>
+      <AnimatePresence>
+        <Main variants={staggerPage} initial="hidden" animate="show">
+          <TravelStyle>
+            <Travel />
+          </TravelStyle>
+
+          <LocationStyle
+            variants={animLocation}
+            animate={controlsLocation}
+            initial="hidden"
+          >
+            <Location />
+          </LocationStyle>
+
+          <BenefitsStyle
+            variants={animBenefits}
+            animate={controlsBenefits}
+            initial="hidden"
+          >
+            <Benefits />
+          </BenefitsStyle>
+
+          <ContactStyle
+            variants={animContact}
+            animate={controlsContact}
+            initial="hidden"
+          >
+            <Contact />
+          </ContactStyle>
+        </Main>
+      </AnimatePresence>
       <StyleFooter>
         <Footer />
       </StyleFooter>
@@ -35,7 +84,7 @@ const MainPage = () => {
 
 export default MainPage;
 
-const Main = styled.main`
+const Main = styled(motion.main)`
   overflow: hidden;
 `;
 
@@ -52,7 +101,7 @@ const StyleFooter = styled.div`
 `;
 const LocationStyle = styled(motion.div)`
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 2;
@@ -61,11 +110,10 @@ const LocationStyle = styled(motion.div)`
 const BenefitsStyle = styled(motion.div)`
   position: absolute;
   top: 0%;
-  left: 100%;
   width: 100%;
   z-index: 3;
 `;
-const HeroStyle = styled(motion.div)`
+const TravelStyle = styled(motion.div)`
   position: absolute;
   top: 10%;
   left: 0;
@@ -75,7 +123,6 @@ const HeroStyle = styled(motion.div)`
 const ContactStyle = styled(motion.div)`
   position: absolute;
   top: 0%;
-  right: 100%;
   width: 100%;
   z-index: 4;
 `;

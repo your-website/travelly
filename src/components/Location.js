@@ -50,10 +50,8 @@ const Section = styled.section`
   }
   h3 {
     padding: 4rem 0rem;
-    background: linear-gradient(#fff, #fff);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-weight: bold;
+    color: black;
   }
 
   img {
