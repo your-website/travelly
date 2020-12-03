@@ -3,6 +3,8 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Location from "./components/Location";
 import Benefits from "./components/Benefits";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 // Style
 import GlobalStyles from "./components/GlobalStyles";
 function App() {
@@ -14,7 +16,9 @@ function App() {
         <Hero />
         <Location />
         <Benefits />
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
