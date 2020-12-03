@@ -5,7 +5,9 @@ const Nav = () => {
   return (
     <Header>
       <NavStyle>
-        <h1 id="logo">Travelly</h1>
+        <h1 id="logo">
+          <a href="#hero">Travelly</a>
+        </h1>
         <ul>
           <li>
             <a href="#location">Locations</a>
@@ -25,6 +27,9 @@ const Nav = () => {
 const Header = styled.header`
   background: #131c27;
   color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
 `;
 
 const NavStyle = styled.nav`

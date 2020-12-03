@@ -22,6 +22,8 @@ const Location = () => {
 };
 
 const Section = styled.section`
+  position: relative;
+
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
     url(${(props) => props.background});
   background-size: cover;

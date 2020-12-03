@@ -37,8 +37,8 @@ export default Footer;
 
 const FooterStyle = styled.footer`
   background: rgba(19, 28, 39, 1);
-  min-height: 10vh;
-  padding: 4rem;
+  min-height: 5vh;
+  padding: 2rem;
 
   div {
     display: flex;

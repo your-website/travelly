@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     }
     html {
         font-size: 62.5%;
+        overflow: hidden;
 
         @media (max-width: 950px) {
             font-size: 45%;

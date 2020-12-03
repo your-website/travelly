@@ -22,11 +22,13 @@ const Contact = () => {
 export default Contact;
 
 const ContactStyle = styled.section`
+  position: relative;
   background: url(${(props) => props.background});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
+  background-color: #fff;
 
   display: flex;
   align-items: center;

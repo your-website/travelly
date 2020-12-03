@@ -5,16 +5,18 @@ import { Button } from "../style";
 
 const Form = () => {
   return (
-    <FormStyle>
+    <FormStyle action="https://formspree.io/f/xknpvedd" method="POST">
       <div className="name-form">
-        <label for="name">Name:</label>
+        <label htmlFor="name">Name:</label>
         <input type="text" name="name" required />
       </div>
       <div className="email-form">
-        <label for="email">Email:</label>
-        <input type="email" name="email" required />
+        <label htmlFor="email">Email:</label>
+        <input type="email" name="_replyto" required />
       </div>
-      <Button type="submit">Submit</Button>
+      <Button type="submit" value="Send">
+        Submit
+      </Button>
     </FormStyle>
   );
 };

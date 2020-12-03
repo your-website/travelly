@@ -9,7 +9,7 @@ import data from "../data";
 const Benefits = () => {
   const dataCard = data();
   return (
-    <BenefitsStyle>
+    <BenefitsStyle id="benefits">
       <header>
         <h2>The Perfect Travel</h2>
         <h3>
@@ -38,6 +38,9 @@ const Benefits = () => {
 export default Benefits;
 
 const BenefitsStyle = styled.section`
+  position: relative;
+  background-color: #fff;
+
   header {
     background: #343c44;
     padding: 3rem;

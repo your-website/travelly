@@ -6,7 +6,7 @@ import { Button } from "../style";
 import landingPage from "../img/landing-page.jpg";
 const Hero = () => {
   return (
-    <HeroStyle background={landingPage}>
+    <HeroStyle id="hero" background={landingPage}>
       <h2>Travel Beyond Limits.</h2>
       <h3>
         Start your travel at an affordable price with Travelly <br /> Contact us
@@ -24,6 +24,7 @@ const HeroStyle = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   min-height: 90vh;
+  background-color: #fff;
 
   color: white;
   display: flex;
