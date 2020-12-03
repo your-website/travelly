@@ -14,6 +14,10 @@ const Form = () => {
         <label htmlFor="email">Email:</label>
         <input type="email" name="_replyto" required />
       </div>
+      <div>
+        <label htmlFor="area">Text:</label>
+        <textarea name="area"></textarea>
+      </div>
       <Button type="submit" value="Send">
         Submit
       </Button>
@@ -25,16 +29,28 @@ export default Form;
 
 const FormStyle = styled.form`
   div {
-    padding: 3rem;
+    padding: 2rem;
     text-align: center;
+    max-width: 80%;
+    margin: auto;
+
+    display: flex;
+  }
+
+  textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 0.2rem 3rem;
   }
 
   label {
     margin: 0rem 3rem;
+    flex: 1 0 7rem;
   }
 
   input {
-    padding: 1rem 3rem;
+    width: 100%;
+    padding: 0.2rem 3rem;
   }
 
   button {
@@ -46,6 +62,9 @@ const FormStyle = styled.form`
   }
 
   @media (max-width: 700px) {
+    div {
+      flex-direction: column;
+    }
     input {
       padding: 1rem;
     }

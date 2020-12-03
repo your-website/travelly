@@ -41,7 +41,7 @@ const ContactStyle = styled.section`
 `;
 
 const Container = styled.div`
-  width: 60%;
+  width: 100rem;
   color: white;
   border-radius: 20px;
   background: rgba(19, 28, 39, 0.8);
