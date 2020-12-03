@@ -1,6 +1,6 @@
 import React from "react";
 // Style
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 // Image
 import backgroundLocation from "../img/new-york-page.png";
 import cloudImage from "../img/cloud.png";
