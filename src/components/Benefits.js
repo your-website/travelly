@@ -44,7 +44,7 @@ const BenefitsStyle = styled.section`
   header {
     background: #343c44;
     padding: 3rem;
-    min-height: 30vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,6 +63,6 @@ const Cards = styled.div`
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  min-height: 70vh;
+  min-height: 50vh;
   align-items: center;
 `;

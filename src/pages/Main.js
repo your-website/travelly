@@ -52,30 +52,30 @@ const StyleFooter = styled.div`
 `;
 const LocationStyle = styled(motion.div)`
   position: absolute;
-  top: 0%;
+  top: 100%;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 2;
   background-color: #fff;
 `;
 const BenefitsStyle = styled(motion.div)`
   position: absolute;
   top: 0%;
-  left: 0;
+  left: 100%;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 `;
 const HeroStyle = styled(motion.div)`
   position: absolute;
   top: 10%;
   left: 0;
   width: 100%;
-  z-index: 4;
+  z-index: 1;
 `;
 const ContactStyle = styled(motion.div)`
   position: absolute;
   top: 0%;
-  left: 0;
+  right: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 4;
 `;
