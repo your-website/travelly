@@ -116,7 +116,7 @@ const BenefitsStyle = styled(motion.div)`
 `;
 const TravelStyle = styled(motion.div)`
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 0;
   width: 100%;
   z-index: 1;

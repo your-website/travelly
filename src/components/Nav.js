@@ -28,7 +28,12 @@ const Nav = () => {
 };
 
 const Header = styled.header`
-  background: #131c27;
+  background: rgb(102, 122, 146);
+  background: linear-gradient(
+    90deg,
+    rgba(102, 122, 146, 1) 0%,
+    rgba(44, 62, 84, 1) 100%
+  );
   color: white;
   position: sticky;
   top: 0px;
@@ -36,11 +41,11 @@ const Header = styled.header`
 `;
 
 const NavStyle = styled.nav`
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
   flex-wrap: wrap;
 
   width: 90%;

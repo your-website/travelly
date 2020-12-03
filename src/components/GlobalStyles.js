@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
         font-weight: normal;
     }
     h4,h5 {
-        font-size: 2.8rem;
+        font-size: 2rem;
     }
     li, button, label, input, p {
         font-size: 2rem;

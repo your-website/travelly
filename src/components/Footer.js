@@ -38,7 +38,7 @@ export default Footer;
 const FooterStyle = styled.footer`
   background: rgba(19, 28, 39, 1);
   min-height: 5vh;
-  padding: 2rem;
+  padding: 1rem;
 
   div {
     display: flex;
@@ -69,7 +69,8 @@ const FooterStyle = styled.footer`
   @media (max-width: 668px) {
     text-align: center;
     h5 {
-      padding-bottom: 5rem;
+      padding-bottom: 2rem;
+      font-size: 2rem;
     }
   }
 `;
