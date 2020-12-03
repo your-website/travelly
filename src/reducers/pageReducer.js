@@ -1,8 +1,8 @@
 const initState = {
-  benefits: false,
-  contact: false,
+  benefits: true,
+  contact: true,
   travel: true,
-  location: false,
+  location: true,
 };
 
 const pageReducer = (state = initState, action) => {

@@ -66,7 +66,7 @@ const FooterStyle = styled.footer`
     flex: 1 1 40rem;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 668px) {
     text-align: center;
     h5 {
       padding-bottom: 5rem;

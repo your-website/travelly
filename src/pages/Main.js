@@ -11,14 +11,15 @@ import Footer from "../components/Footer";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import {
   animLocation,
-  staggerPage,
   animBenefits,
   animContact,
+  staggerPage,
 } from "../animations";
 // Redux
 import { useSelector } from "react-redux";
 
 const MainPage = () => {
+  // Controls for animate
   const { benefits, contact, location } = useSelector((state) => state.page);
 
   const controlsLocation = useAnimation();
@@ -45,13 +46,13 @@ const MainPage = () => {
   return (
     <Page>
       <AnimatePresence>
-        <Main variants={staggerPage} initial="hidden" animate="show">
+        <Main>
           <TravelStyle>
             <Travel />
           </TravelStyle>
 
           <LocationStyle
-            variants={animLocation}
+            variants={animLocation(0.7)}
             animate={controlsLocation}
             initial="hidden"
           >
@@ -59,7 +60,7 @@ const MainPage = () => {
           </LocationStyle>
 
           <BenefitsStyle
-            variants={animBenefits}
+            variants={animBenefits(0.7)}
             animate={controlsBenefits}
             initial="hidden"
           >
@@ -67,7 +68,7 @@ const MainPage = () => {
           </BenefitsStyle>
 
           <ContactStyle
-            variants={animContact}
+            variants={animContact(0.7)}
             animate={controlsContact}
             initial="hidden"
           >

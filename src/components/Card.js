@@ -38,6 +38,10 @@ const CardStyle = styled.div`
     padding: 1rem;
   }
 
+  @media (max-width: 1100px) {
+    margin: 2rem 2rem;
+  }
+
   @media (max-width: 320px) {
     margin: 2rem 1rem;
   }
