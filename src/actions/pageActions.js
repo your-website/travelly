@@ -45,3 +45,12 @@ export const setLocationPage = (payload) => {
     },
   };
 };
+
+export const setSelectPage = (payload) => {
+  return {
+    type: "SET_SELECT_PAGE",
+    payload: {
+      selectPage: payload,
+    },
+  };
+};

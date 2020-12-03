@@ -1,26 +1,48 @@
 import React from "react";
 import styled from "styled-components";
 // Redux
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   setContactPage,
   setBenefitsPage,
   setTravelPage,
   setLocationPage,
+  setSelectPage,
 } from "../actions/pageActions";
-
+// Animation
+import SelectNav from "./SelectNav";
+import { motion } from "framer-motion";
 const Nav = () => {
   const dispatch = useDispatch();
+  const { selectPage } = useSelector((state) => state.page);
+
+  const nextPage = (selectPage, set, value) => {
+    dispatch(set(value));
+    dispatch(setSelectPage(selectPage));
+  };
   return (
     <Header>
       <NavStyle>
-        <h1 id="logo" onClick={() => dispatch(setTravelPage(true))}>
-          Travelly
-        </h1>
+        <TrackAnim>
+          <h1 id="logo" onClick={() => nextPage("travel", setTravelPage, true)}>
+            Travelly
+          </h1>
+          {selectPage === "travel" && <SelectNav />}
+        </TrackAnim>
         <ul>
-          <li onClick={() => dispatch(setLocationPage(true))}>Locations</li>
-          <li onClick={() => dispatch(setBenefitsPage(true))}>Benefits</li>
-          <li onClick={() => dispatch(setContactPage(true))}>Contact</li>
+          <li onClick={() => nextPage("location", setLocationPage, true)}>
+            <p>Locations</p>
+            {selectPage === "location" && <SelectNav />}
+          </li>
+
+          <li onClick={() => nextPage("benefits", setBenefitsPage, true)}>
+            <p>Benefits</p>
+            {selectPage === "benefits" && <SelectNav />}
+          </li>
+          <li onClick={() => nextPage("contact", setContactPage, true)}>
+            <p>Contact</p>
+            {selectPage === "contact" && <SelectNav />}
+          </li>
         </ul>
       </NavStyle>
     </Header>
@@ -47,29 +69,32 @@ const NavStyle = styled.nav`
   justify-content: space-between;
   padding: 1rem;
   flex-wrap: wrap;
+  overflow: hidden;
 
   width: 90%;
   margin: auto;
 
-  h1 {
-    flex: 2 1 40rem;
-    font-family: "Pattaya", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    cursor: pointer;
-  }
-
   ul {
     display: flex;
-    justify-content: space-around;
     list-style: none;
-    flex: 1 1 40rem;
+    flex: 0 1 60rem;
   }
 
   li {
+    position: relative;
     flex: 1 0 10rem;
     text-align: center;
     cursor: pointer;
+    p {
+      position: relative;
+      z-index: 2;
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      right: 0.2rem;
+      z-index: 1;
+    }
   }
 
   @media (max-width: 671px) {
@@ -78,6 +103,45 @@ const NavStyle = styled.nav`
     h1 {
       padding: 2rem;
     }
+  }
+`;
+
+const TrackAnim = styled(motion.div)`
+  position: relative;
+  display: flex;
+  flex: 0 0;
+
+  h1 {
+    position: relative;
+    font-family: "Pattaya", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  svg {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    z-index: 1;
+  }
+
+  @media (max-width: 950px) {
+    svg {
+      top: 0;
+    }
+  }
+
+  @media (max-width: 655px) {
+    svg {
+      top: 2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex: 1;
+    justify-content: center;
   }
 `;
 
