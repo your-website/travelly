@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/travelly/static/js/main.e032a77e.chunk.js",
-    "main.js.map": "/travelly/static/js/main.e032a77e.chunk.js.map",
+    "main.js": "/travelly/static/js/main.e72f43bc.chunk.js",
+    "main.js.map": "/travelly/static/js/main.e72f43bc.chunk.js.map",
     "runtime-main.js": "/travelly/static/js/runtime-main.a129b41c.js",
     "runtime-main.js.map": "/travelly/static/js/runtime-main.a129b41c.js.map",
     "static/js/2.249baa24.chunk.js": "/travelly/static/js/2.249baa24.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/new-york-page.cafe77b3.png": "/travelly/static/media/new-york-page.cafe77b3.png",
     "static/media/swipe_1.ac00a047.jpg": "/travelly/static/media/swipe_1.ac00a047.jpg",
     "static/media/swipe_2.3710dbc4.jpg": "/travelly/static/media/swipe_2.3710dbc4.jpg",
-    "static/media/swiper_3.04cf44c3.jpg": "/travelly/static/media/swiper_3.04cf44c3.jpg",
+    "static/media/swiper_3.b30273cd.jpg": "/travelly/static/media/swiper_3.b30273cd.jpg",
     "static/media/travel.53f2a249.jpg": "/travelly/static/media/travel.53f2a249.jpg",
     "static/media/twitter.89a6e616.svg": "/travelly/static/media/twitter.89a6e616.svg",
     "static/media/youtube.ed5daf28.svg": "/travelly/static/media/youtube.ed5daf28.svg"
@@ -25,6 +25,6 @@
   "entrypoints": [
     "static/js/runtime-main.a129b41c.js",
     "static/js/2.249baa24.chunk.js",
-    "static/js/main.e032a77e.chunk.js"
+    "static/js/main.e72f43bc.chunk.js"
   ]
 }
