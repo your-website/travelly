@@ -9,12 +9,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 // Animate
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
-import {
-  animLocation,
-  animBenefits,
-  animContact,
-  staggerPage,
-} from "../animations";
+import { animLocation, animBenefits, animContact } from "../animations";
 // Redux
 import { useSelector } from "react-redux";
 
@@ -44,7 +39,7 @@ const MainPage = () => {
   }
 
   return (
-    <Page>
+    <>
       <AnimatePresence>
         <Main>
           <TravelStyle>
@@ -79,7 +74,7 @@ const MainPage = () => {
       <StyleFooter>
         <Footer />
       </StyleFooter>
-    </Page>
+    </>
   );
 };
 
@@ -87,43 +82,43 @@ export default MainPage;
 
 const Main = styled(motion.main)`
   overflow: hidden;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  z-index: 10;
+  position: absolute;
 `;
 
-const Page = styled.div`
-  height: 90vh;
+const Page = styled(motion.div)`
+  position: absolute;
+  height: 100%;
+  top: 0%;
   width: 100%;
 `;
+
 const StyleFooter = styled.div`
   position: absolute;
+
   bottom: 0%;
   left: 0;
   z-index: 6;
   width: 100%;
+  z-index: 11;
 `;
-const LocationStyle = styled(motion.div)`
-  position: absolute;
-  top: 0;
+const LocationStyle = styled(Page)`
   left: 0;
-  width: 100%;
   z-index: 2;
   background-color: #fff;
 `;
-const BenefitsStyle = styled(motion.div)`
-  position: absolute;
-  top: 0%;
+const BenefitsStyle = styled(Page)`
   width: 100%;
   z-index: 3;
 `;
-const TravelStyle = styled(motion.div)`
-  position: absolute;
-  top: 5%;
-  left: 0;
+const TravelStyle = styled(Page)`
   width: 100%;
   z-index: 1;
 `;
-const ContactStyle = styled(motion.div)`
-  position: absolute;
-  top: 0%;
+const ContactStyle = styled(Page)`
   width: 100%;
   z-index: 4;
 `;

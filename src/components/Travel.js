@@ -23,7 +23,7 @@ const Traveltyle = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 90vh;
+  height: 100%;
   background-color: #fff;
 
   color: white;

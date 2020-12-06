@@ -26,11 +26,13 @@ export default Benefits;
 const BenefitsStyle = styled.section`
   position: relative;
   background-color: #fff;
+  height: 100%;
 `;
 
 const Header = styled.header`
   background: #343c44;
-  min-height: 100vh;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;

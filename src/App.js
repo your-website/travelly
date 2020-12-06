@@ -4,6 +4,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import Nav from "./components/Nav";
 // Pages
 import MainPage from "./pages/Main";
+
 function App() {
   return (
     <div className="App">

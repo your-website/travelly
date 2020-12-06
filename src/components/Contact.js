@@ -27,7 +27,8 @@ const ContactStyle = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;
+  height: 100%;
+
   background-color: #fff;
 
   display: flex;
@@ -37,6 +38,13 @@ const ContactStyle = styled.section`
   header {
     text-align: center;
     padding: 4rem;
+  }
+
+  @media (max-width: 700px) {
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
   }
 `;
 

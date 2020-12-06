@@ -29,7 +29,7 @@ const Section = styled.section`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  height: 100%;
 
   display: flex;
   align-items: center;

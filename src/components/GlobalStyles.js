@@ -12,9 +12,18 @@ const GlobalStyles = createGlobalStyle`
         @media (max-width: 950px) {
             font-size: 45%;
         }
+
+        @media (max-width: 350px) {
+            font-size: 35%;
+        }
+
+        @media (max-width: 290px) {
+            font-size: 28%;
+        }
     }
     body {
         font-family: 'Noto Serif JP', serif;
+        overflow: hidden;
     }
     h1 {
         font-size: 2.6rem;

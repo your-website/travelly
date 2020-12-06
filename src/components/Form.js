@@ -18,9 +18,9 @@ const Form = () => {
         <label htmlFor="area">Text:</label>
         <textarea name="area"></textarea>
       </div>
-      <Button type="submit" value="Send">
+      <FormButton type="submit" value="Send">
         Submit
-      </Button>
+      </FormButton>
     </FormStyle>
   );
 };
@@ -53,20 +53,34 @@ const FormStyle = styled.form`
     padding: 0.2rem 3rem;
   }
 
-  button {
-    width: 100%;
-    padding: 2rem;
-    margin-top: 8rem;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-
   @media (max-width: 700px) {
     div {
-      flex-direction: column;
+      display: block;
+      padding: 0;
+      text-align: left;
     }
     input {
       padding: 1rem;
     }
+    Button {
+      margin-top: 3rem;
+    }
+    label {
+      padding: 2rem 0rem;
+      display: block;
+      margin: 0;
+    }
+  }
+`;
+
+const FormButton = styled(Button)`
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @media (max-width: 700px) {
+    margin-top: 3rem;
   }
 `;
